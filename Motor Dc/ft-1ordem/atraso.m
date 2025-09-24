@@ -4,7 +4,7 @@ s = tf('s');
 G = 0.46 / (s + 3.3);
 
 % Compensador por atrasinho
-z = 7.49;
+z = 12.49;
 p = 0.0547;
 Gc = (s + z) / (s + p);
 

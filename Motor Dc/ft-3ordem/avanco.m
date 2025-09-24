@@ -1,20 +1,17 @@
 clear; clc; close all;
+
 s = tf('s');
 
 % A planta original
 P = tf([-0.01288 -24.6 6115], [1 145.7 13600 43650]);
 
 % O compensador de avanço projetado
-K   = 200.40;
-z_c = 3.4518;
-p_c = 77.55;
+K   = 56.738;
+z_c = 2.1;
+p_c = 3.3;
 G1 = K * (s + z_c) / (s + p_c);
 
-%Compensador de atraso
-z_at = 5.94;
-p_at = 0.05;
-G2 = (s + z_at)/(s + p_at);
-L = G2 * G1 * P;
+L = G1 * P;
 
 T = feedback(L, 1);
 

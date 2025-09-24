@@ -42,5 +42,5 @@ fprintf('Erro estacionário: %.4f\n', 1 - final_value);
 %b0 = 61.37;
 %b1 = -59.01;
 %a1 = +0.999; 
-%Equação: u[k] = b0*e[k] + b1*e[k - 1] - a1*u[k-1]
-%u[k] = -61.37*e[k] - 59.01*e[k - 1] - 0.999*u[k - 1]
+%Equação: u[k] = b0*e[k] + b1*e[k - 1] + a1*u[k-1]
+%u[k] = 61.37*e[k] - 59.01*e[k - 1] + 0.999*u[k - 1]
